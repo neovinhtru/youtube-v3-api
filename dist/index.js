@@ -32,4 +32,7 @@ exports.YoutubeDataAPI = class {
     searchPlaylistItems(playlistId, maxResults, args = {}) {
         return playlist_1.search_playlist_items(this.apiKey, playlistId, maxResults, args);
     }
+    getChannelIdFromUser(userName, args = {}) {
+        return channel_1.get_channel_id(this.apiKey, userName, args);
+    }
 };

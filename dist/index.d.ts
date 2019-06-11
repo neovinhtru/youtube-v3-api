@@ -9,5 +9,6 @@ export declare const YoutubeDataAPI: {
         searchCommentThreads(videoId: string, args?: any): Promise<{}>;
         searchPlaylist(channelId: string, maxResults: number, args?: any): Promise<{}>;
         searchPlaylistItems(playlistId: string, maxResults: number, args?: any): Promise<{}>;
+        getChannelIdFromUser(userName: string, args?: any): Promise<{}>;
     };
 };

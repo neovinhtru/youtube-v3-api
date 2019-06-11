@@ -1,6 +1,7 @@
 import {
     search_channel_sections,
     search_channel,
+    get_channel_id,
 } from './API/channel';
 
 import {
@@ -19,7 +20,7 @@ import {
 } from './API/video';
 
 export const YoutubeDataAPI = class {
-    
+
     apiKey : string;
 
     constructor (API_KEY : string) {
@@ -57,5 +58,8 @@ export const YoutubeDataAPI = class {
     searchPlaylistItems (playlistId : string, maxResults : number, args : any = {}) {
         return search_playlist_items (this.apiKey, playlistId, maxResults, args);
     }
-    
+    getChannelIdFromUser (userName : string, args : any = {}) {
+        return get_channel_id (this.apiKey, userName, args);
+    }
+
 }

@@ -32,3 +32,18 @@ function search_channel(API_KEY, id, args = {}) {
     });
 }
 exports.search_channel = search_channel;
+function get_channel_id(API_KEY, userName, args = {}) {
+    return new Promise((resolve, reject) => {
+        args.part = "id";
+        args.key = API_KEY;
+        args.forUsername = userName;
+        axios_1.default.get(urls_1.SEARCH_CHANNEL_URL, {
+            params: args
+        }).then((response) => {
+            resolve(response.data);
+        }).catch((err) => {
+            reject(err);
+        });
+    });
+}
+exports.get_channel_id = get_channel_id;

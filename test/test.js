@@ -69,4 +69,11 @@ describe('Base Functions tests', () => {
             console.error(err);
         })
     });
+    it('Get Channel Id', () => {
+        index.getChannelIdFromUser("bbcnews").then((data) => {
+            expect(data.kind).to.equal('youtube#channelListResponse');
+        },(err) => {
+            console.error(err);
+        })
+    });
 });
