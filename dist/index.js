@@ -35,4 +35,7 @@ exports.YoutubeDataAPI = class {
     getChannelIdFromUser(userName, args = {}) {
         return channel_1.get_channel_id(this.apiKey, userName, args);
     }
+    getItemChannel(id, maxResults, args = {}) {
+        return channel_1.get_item_channel(this.apiKey, id, maxResults, args);
+    }
 };

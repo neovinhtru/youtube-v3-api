@@ -35,7 +35,7 @@ describe('Base Functions tests', () => {
         })
     });
     it('Playlist Search', () => {
-        index.searchPlaylist("UC_x5XG1OV2P6uZZ5FSM9Ttw",25).then((data) => {
+        index.searchPlaylist("UCwrK6pBpGYt18gTH3REw-ig",25).then((data) => {
             expect(data.kind).to.equal('youtube#playlistListResponse');
         },(err) => {
             console.error(err);
@@ -72,6 +72,13 @@ describe('Base Functions tests', () => {
     it('Get Channel Id', () => {
         index.getChannelIdFromUser("bbcnews").then((data) => {
             expect(data.kind).to.equal('youtube#channelListResponse');
+        },(err) => {
+            console.error(err);
+        })
+    });
+    it('Get Items of Channel', () => {
+        index.getItemChannel("UCwrK6pBpGYt18gTH3REw-ig", 8, {"type" : "video"}).then((data) => {
+            expect(data.kind).to.equal('youtube#searchListResponse');
         },(err) => {
             console.error(err);
         })

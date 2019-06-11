@@ -10,5 +10,6 @@ export declare const YoutubeDataAPI: {
         searchPlaylist(channelId: string, maxResults: number, args?: any): Promise<{}>;
         searchPlaylistItems(playlistId: string, maxResults: number, args?: any): Promise<{}>;
         getChannelIdFromUser(userName: string, args?: any): Promise<{}>;
+        getItemChannel(id: string, maxResults: number, args?: any): any;
     };
 };

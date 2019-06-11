@@ -2,7 +2,8 @@ import axios, {AxiosError} from 'axios';
 
 import {
     SEARCH_CHANNEL_URL,
-    SEARCH_CHANNEL_SECTIONS_URL
+    SEARCH_CHANNEL_SECTIONS_URL,
+    SEARCH_ALL_URL
 } from './urls';
 
 export function search_channel_sections (
@@ -59,6 +60,29 @@ export function get_channel_id (
         args.forUsername = userName;
 
         axios.get(SEARCH_CHANNEL_URL,{
+            params : args
+        }).then((response:any) => {
+            resolve(response.data);
+        }).catch((err : AxiosError) => {
+            reject(err);
+        });
+    });
+}
+
+export function get_item_channel (
+    API_KEY : string,
+    channelId: string,
+    maxResults: number,
+    args : any = {},
+) {
+    return new Promise<{}>((resolve, reject) => {
+
+        args.part = "snippet";
+        args.key = API_KEY;
+        args.channelId = channelId;
+        args.maxResults = maxResults;
+
+        axios.get(SEARCH_ALL_URL,{
             params : args
         }).then((response:any) => {
             resolve(response.data);
