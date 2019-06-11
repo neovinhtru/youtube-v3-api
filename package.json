@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kanishkarj/youtube-v3-api.git"
+    "url": "git+https://github.com/neovinhtru/youtube-v3-api.git"
   },
   "author": "kanishkarj",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kanishkarj/youtube-v3-api/issues"
+    "url": "https://github.com/neovinhtru/youtube-v3-api/issues"
   },
-  "homepage": "https://github.com/kanishkarj/youtube-v3-api#readme",
+  "homepage": "https://github.com/neovinhtru/youtube-v3-api#readme",
   "dependencies": {
     "axios": "^0.18.0"
   },
